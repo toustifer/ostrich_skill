@@ -1,0 +1,4 @@
+interface:
+  display_name: "Learning While Building"
+  short_description: "Explain code and concepts while implementing"
+  default_prompt: "Use $learning-while-building to implement the task while teaching through the current project context."
