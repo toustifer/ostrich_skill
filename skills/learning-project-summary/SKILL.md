@@ -1,16 +1,16 @@
 ---
 name: learning-project-summary
-description: "Create and update structured learning-project markdown in the user's learning workspace. Use when the user wants to create a new project summary, add or update goal pages, maintain goal status, or keep learning-project notes aligned with the workspace spec."
+description: "Create and update structured learning-project markdown in the user's learning vault. Use when the user wants to create a new project summary, add or update goal pages, maintain goal status, or keep learning-project notes aligned with the vault spec."
 ---
 
 # Learning Project Summary
 
-Use this skill to write project-learning cards into the user's learning workspace.
+Use this skill to write project-learning cards into the user's learning vault.
 
 ## Scope
 
-- Only write under the user's learning-project workspace root.
-- Treat the workspace spec markdown in that root as the source of truth.
+- Only write under the user's learning-project vault root.
+- Treat the vault spec markdown in that root as the source of truth.
 - Follow the directory structure, field order, and writing style from that spec.
 - Preserve existing content unless the user explicitly asks to rewrite or replace it.
 
@@ -18,10 +18,9 @@ Use this skill to write project-learning cards into the user's learning workspac
 
 Before creating or editing any file:
 
-1. Find the learning workspace root the user is referring to.
-2. If the user has not set up a local markdown workspace yet, ask them to choose or install a suitable local note application, such as Obsidian, and then provide the workspace root.
-3. Read the spec markdown in that root.
-4. Use that spec to drive all new structure and templates.
+1. Find the learning vault root the user is referring to.
+2. Read the spec markdown in that root.
+3. Use that spec to drive all new structure and templates.
 
 If the spec and an existing project file conflict, prefer:
 
@@ -31,7 +30,7 @@ If the spec and an existing project file conflict, prefer:
 
 ## Workflow
 
-1. Resolve the target project under the learning workspace root.
+1. Resolve the target project under the learning vault root.
 2. Check whether the project already exists.
 3. If it does not exist, create the standard skeleton from the spec.
 4. If it exists, update only the requested sections.
@@ -83,14 +82,14 @@ Allowed updates include:
 - Do not rename folders or files away from the spec.
 - Do not overwrite whole files when a targeted append or section update is enough.
 - Do not create technical deep-dives unless the user explicitly asks for them.
-- Do not write outside the learning workspace root.
+- Do not write outside the learning vault root.
 
 ## Expected requests
 
 This skill should trigger for prompts like:
 
 - "Use learning-project-summary to create a learning project summary"
-- "Build the project skeleton in the learning workspace"
+- "Build the project skeleton in the learning vault"
 - "Add a few goal pages for this project"
 - "Update the weak points and completion criteria"
-- "Organize this project according to the workspace spec"
+- "Organize this project according to the learning-vault spec"

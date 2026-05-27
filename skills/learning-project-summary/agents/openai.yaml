@@ -1,7 +1,7 @@
 interface:
   display_name: "Learning Project Summary"
   short_description: "Create structured learning-project cards."
-  default_prompt: "Use $learning-project-summary to create or update a project summary in the user's learning workspace after they provide the workspace root."
+  default_prompt: "Use $learning-project-summary to create or update a project summary in the learning vault."
 
 policy:
   allow_implicit_invocation: true
